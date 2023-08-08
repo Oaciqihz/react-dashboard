@@ -1,8 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './styles/App.css';
-import { HomeLayout } from './components/HomeLayout';
+import { Redirect } from './components/Redirect';
 import { ProtectedLayout } from './components/ProtectedLayout';
-import HomePage from './views/Home';
 import LoginPage from './views/Login';
 import ProfilePage from './views/Profile';
 import SettingsPage from './views/Settings';
@@ -13,7 +12,7 @@ function App() {
   return (
     <Routes>
       {/* 错误地址重定向 */}
-      <Route path="*" element={<HomeLayout />} />
+      <Route path="*" element={<Redirect />} />
       <Route path="/login" element={<LoginPage />} />
       <Route 
         path="/dashboard" 
