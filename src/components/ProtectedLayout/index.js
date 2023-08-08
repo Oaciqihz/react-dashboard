@@ -1,14 +1,15 @@
-import { Link, Navigate, useOutlet } from "react-router-dom";
+import { Navigate, useOutlet } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import { AppBar } from "../AppBar";
 
 export const ProtectedLayout = () => {
-  const { user } = useAuth();
+  const { user, auth } = useAuth();
   const outlet = useOutlet();
 
   if (!user) {
     return <Navigate to="/" />;
   }
+//   自动生成侧边栏
 
   return (
     <div>
