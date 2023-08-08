@@ -9,7 +9,8 @@ export default function LoginPage(params) {
 
     const onFinish = (values) => {
         const { username, password } = values;
-        login({ username, password });
+        // TODO: 登录接口
+        login({ username, password }, ["profile", "settings"]);
     };
 
     return (

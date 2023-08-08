@@ -10,10 +10,8 @@ export const AuthProvider = ({ children }) => {
 
   const navigate = useNavigate();
 
-  const login = async (data) => {
+  const login = async (data, auth) => {
     setUser(data);
-    // 获取auth存在本地
-    let auth = ["profile", "settings"]
     setAuth(auth)
     navigate("/dashboard/profile", { replace: true });
   };
