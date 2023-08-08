@@ -4,6 +4,7 @@ import { useState } from "react";
 import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
+    GithubOutlined
 } from '@ant-design/icons';
 import { Layout, Menu, Button, theme } from 'antd';
 import "./index.scss";
@@ -42,7 +43,9 @@ export const ProtectedLayout = () => {
     <Layout style={{height: "100vh"}} className="main">
         {/* 侧边栏 */}
       <Sider trigger={null} collapsible collapsed={collapsed} className="main-sidebar">
-        <div className="demo-logo-vertical" />
+        <div className="demo-logo-vertical" >
+            <GithubOutlined />
+        </div>
         <Menu
           theme="dark"
           mode="inline"
