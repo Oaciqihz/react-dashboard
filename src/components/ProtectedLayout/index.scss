@@ -1,0 +1,18 @@
+.main{
+    // 侧边栏
+    .main-sidebar{
+
+    }
+    // 正文
+    .main-content{
+        // 正文导航栏
+        .content-navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+        // 正文内容
+        .content-info{
+
+        }
+    }
+}

@@ -12,11 +12,9 @@ import TutorialsPage from './views/Tutorials';
 function App() {
   return (
     <Routes>
-      <Route element={<HomeLayout />}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Route>
-    
+      {/* 错误地址重定向 */}
+      <Route path="*" element={<HomeLayout />} />
+      <Route path="/login" element={<LoginPage />} />
       <Route 
         path="/dashboard" 
         element={
